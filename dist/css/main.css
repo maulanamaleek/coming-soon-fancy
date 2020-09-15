@@ -92,6 +92,7 @@ body {
 
 .container .text p {
   margin-top: 2rem;
+  width: 60%;
   margin-bottom: 4rem;
   font-family: "Caveat", cursive;
   font-size: 1.7rem;
@@ -159,6 +160,8 @@ body {
 
 .container .text ul {
   position: absolute;
+  left: 0;
+  bottom: 150px;
 }
 
 @media (max-width: 768px) {
