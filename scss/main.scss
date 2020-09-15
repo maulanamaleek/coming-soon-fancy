@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Reem+Kufi&display=swap");
+@import "./variables";
+
+body {
+  background: $primary;
+  font-family: "Reem Kufi", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  @media (max-width: $media-sm) {
+    grid-template-columns: 1fr;
+  }
+
+  .text {
+    color: $primary-dark;
+    line-height: 1.1;
+    padding-top: 15rem;
+    padding-left: 15rem;
+    position: relative;
+    margin: 0;
+    z-index: 3;
+
+    @media (max-width: $media-sm) {
+      height: 40vw;
+      padding-top: 0;
+      width: 100vw;
+      position: absolute;
+      color: #fff;
+    }
+
+    @media (max-width: $media-md) {
+      line-height: 1;
+      padding-left: 1.2rem;
+      width: 60vw;
+      padding-top: 15rem;
+    }
+
+    h1 {
+      font-size: 5rem;
+      letter-spacing: 7px;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      font-family: "Caveat", cursive;
+      font-size: 1.7rem;
+
+      @media (max-width: $media-sm) {
+        width: 80vw;
+      }
+    }
+
+    form {
+      background-color: #fff;
+      width: fit-content;
+      padding: 5px 5px;
+      border-radius: 20px;
+      @media (max-width: $media-sm) {
+        width: 80vw;
+        padding: 5px 0;
+      }
+      input {
+        outline: none;
+        border: 0;
+        padding-left: 10px;
+        width: 300px;
+        height: 30px;
+        @media (max-width: $media-sm) {
+          width: 55vw;
+        }
+      }
+
+      button {
+        background-image: $gradient;
+        padding: 15px 15px;
+        color: #fff;
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 20px;
+        transition: all ease 0.2s;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.85;
+        }
+      }
+    }
+
+    ul {
+      position: absolute;
+      left: 0px;
+      bottom: 150px;
+
+      @media (max-width: $media-md) {
+        transform: rotate(0deg);
+        margin: 50px auto;
+        position: static;
+      }
+
+      li {
+        transition: all ease 0.2s;
+        &:hover {
+          color: $orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .image {
+    background: url("/img/fashion.jpg") center;
+    background-size: cover;
+    @media (max-width: $media-sm) {
+      &::after {
+        content: "";
+        background-color: $primary-dark;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0.1;
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Reem+Kufi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+li {
+  margin-right: 20px;
+}
+
+body {
+  background: #eebab2;
+  font-family: "Reem Kufi", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 480px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.container .text {
+  color: #c47482;
+  line-height: 1.1;
+  padding-top: 15rem;
+  padding-left: 15rem;
+  position: relative;
+  margin: 0;
+  z-index: 3;
+}
+
+@media (max-width: 480px) {
+  .container .text {
+    height: 40vw;
+    padding-top: 0;
+    width: 100vw;
+    position: absolute;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .text {
+    line-height: 1;
+    padding-left: 1.2rem;
+    width: 60vw;
+    padding-top: 15rem;
+  }
+}
+
+.container .text h1 {
+  font-size: 5rem;
+  letter-spacing: 7px;
+}
+
+.container .text p {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  font-family: "Caveat", cursive;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 480px) {
+  .container .text p {
+    width: 80vw;
+  }
+}
+
+.container .text form {
+  background-color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 20px;
+}
+
+@media (max-width: 480px) {
+  .container .text form {
+    width: 80vw;
+    padding: 5px 0;
+  }
+}
+
+.container .text form input {
+  outline: none;
+  border: 0;
+  padding-left: 10px;
+  width: 300px;
+  height: 30px;
+}
+
+@media (max-width: 480px) {
+  .container .text form input {
+    width: 55vw;
+  }
+}
+
+.container .text form button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#eebab2), to(#c47482));
+  background-image: linear-gradient(to right, #eebab2, #c47482);
+  padding: 15px 15px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 20px;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.container .text form button:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.container .text ul {
+  position: absolute;
+  left: 0px;
+  bottom: 150px;
+}
+
+@media (max-width: 768px) {
+  .container .text ul {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin: 50px auto;
+    position: static;
+  }
+}
+
+.container .text ul li {
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.container .text ul li:hover {
+  color: #f27348;
+  cursor: pointer;
+}
+
+.container .image {
+  background: url("/img/fashion.jpg") center;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  .container .image::after {
+    content: "";
+    background-color: #c47482;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
