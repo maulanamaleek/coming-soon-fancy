@@ -113,7 +113,7 @@ body {
   }
 
   .image {
-    background: url("../img/fashion.jpg") center;
+    background: url("./img/fashion.jpg") center;
     background-size: cover;
     @media (max-width: $media-sm) {
       &::after {
