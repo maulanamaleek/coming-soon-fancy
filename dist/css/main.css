@@ -26,6 +26,7 @@ li {
 body {
   background: #eebab2;
   font-family: "Reem Kufi", sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -41,6 +42,7 @@ body {
   .container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    position: relative;
   }
 }
 
@@ -59,7 +61,10 @@ body {
     height: 40vw;
     padding-top: 0;
     width: 100vw;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     position: absolute;
+    top: 0;
     color: #fff;
   }
 }
@@ -78,6 +83,13 @@ body {
   letter-spacing: 7px;
 }
 
+@media (max-width: 480px) {
+  .container .text h1 {
+    font-size: 3.7rem;
+    letter-spacing: 4px;
+  }
+}
+
 .container .text p {
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -88,6 +100,13 @@ body {
 @media (max-width: 480px) {
   .container .text p {
     width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .text p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -140,8 +159,6 @@ body {
 
 .container .text ul {
   position: absolute;
-  left: 0px;
-  bottom: 150px;
 }
 
 @media (max-width: 768px) {
@@ -178,7 +195,7 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
-    opacity: 0.1;
+    opacity: 0.15;
   }
 }
 /*# sourceMappingURL=main.css.map */
